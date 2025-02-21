@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z Books ERP System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .sidebar {
+            height: calc(100vh - 64px);
+        }
+        .active-nav {
+            background-color: #1a275f;
+            color: white;
+        }
+        .dashboard-card {
+            transition: transform 0.2s;
+        }
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Navigation -->
+    <nav class="bg-white shadow-lg px-4 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/40" alt="Logo" class="h-8">
+                <h1 class="text-xl font-bold ml-2 text-blue-900">Z Books ERP</h1>
+            </div>
+            <div class="flex items-center gap-4">
+                <select class="bg-gray-50 border rounded px-2 py-1">
+                    <option>English</option>
+                    <option>ಕನ್ನಡ</option>
+                </select>
+                <button class="flex items-center gap-2 bg-gray-100 rounded-full px-3 py-1">
+                    <i class="bi bi-person-circle"></i>
+                    <span>Admin</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-lg sidebar">
+            <nav class="p-4">
+                <div class="space-y-2">
+                    <a href="#" class="flex items-center gap-2 p-2 rounded active-nav">
+                        <i class="bi bi-grid"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-2 p-2 rounded hover:bg-gray-100">
+                        <i class="bi bi-building"></i>
+                        <span>Entity Management</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-2 p-2 rounded hover:bg-gray-100">
+                        <i class="bi bi-currency-exchange"></i>
+                        <span>Currency Conversion</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-2 p-2 rounded hover:bg-gray-100">
+                        <i class="bi bi-journal-text"></i>
+                        <span>Ledger Management</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-2 p-2 rounded hover:bg-gray-100">
+                        <i class="bi bi-cash-stack"></i>
+                        <span>Income/Expense</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-2 p-2 rounded hover:bg-gray-100">
+                        <i class="bi bi-file-earmark-text"></i>
+                        <span>Reports</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-2 p-2 rounded hover:bg-gray-100">
+                        <i class="bi bi-people"></i>
+                        <span>Membership</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-2 p-2 rounded hover:bg-gray-100">
+                        <i class="bi bi-shield-lock"></i>
+                        <span>Role Management</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Quick Stats -->
+                <div class="bg-white p-6 rounded-lg shadow dashboard-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500">Total Income</p>
+                            <h3 class="text-2xl font-bold">₹45,675</h3>
+                        </div>
+                        <div class="bg-green-100 p-3 rounded-full">
+                            <i class="bi bi-graph-up text-green-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow dashboard-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500">Total Expense</p>
+                            <h3 class="text-2xl font-bold">₹32,456</h3>
+                        </div>
+                        <div class="bg-red-100 p-3 rounded-full">
+                            <i class="bi bi-graph-down text-red-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow dashboard-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500">Active Members</p>
+                            <h3 class="text-2xl font-bold">1,234</h3>
+                        </div>
+                        <div class="bg-blue-100 p-3 rounded-full">
+                            <i class="bi bi-people text-blue-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow dashboard-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500">Total Entities</p>
+                            <h3 class="text-2xl font-bold">45</h3>
+                        </div>
+                        <div class="bg-purple-100 p-3 rounded-full">
+                            <i class="bi bi-building text-purple-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="mt-8">
+                <h2 class="text-xl font-semibold mb-4">Quick Actions</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <button class="bg-white p-4 rounded-lg shadow flex items-center gap-3 hover:bg-gray-50">
+                        <i class="bi bi-plus-circle text-blue-600"></i>
+                        <span>Add New Transaction</span>
+                    </button>
+                    <button class="bg-white p-4 rounded-lg shadow flex items-center gap-3 hover:bg-gray-50">
+                        <i class="bi bi-person-plus text-green-600"></i>
+                        <span>Add New Member</span>
+                    </button>
+                    <button class="bg-white p-4 rounded-lg shadow flex items-center gap-3 hover:bg-gray-50">
+                        <i class="bi bi-file-earmark-text text-purple-600"></i>
+                        <span>Generate Report</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Recent Transactions -->
+            <div class="mt-8">
+                <h2 class="text-xl font-semibold mb-4">Recent Transactions</h2>
+                <div class="bg-white rounded-lg shadow overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="bg-gray-50">
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Date</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Type</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Amount</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4">2023-11-15</td>
+                                <td class="px-6 py-4">Office Supplies</td>
+                                <td class="px-6 py-4">Expense</td>
+                                <td class="px-6 py-4 text-red-600">-₹1,200</td>
+                                <td class="px-6 py-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4">2023-11-14</td>
+                                <td class="px-6 py-4">Membership Fee</td>
+                                <td class="px-6 py-4">Income</td>
+                                <td class="px-6 py-4 text-green-600">+₹5,000</td>
+                                <td class="px-6 py-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Currency Conversion Logic
+        const currencyRates = {
+            'INR': 1,
+            'SAR': 22.15 // Example rate
+        };
+
+        function convertCurrency(amount, fromCurrency, toCurrency) {
+            if (fromCurrency === toCurrency) return amount;
+            if (fromCurrency === 'INR') return amount * currencyRates[toCurrency];
+            if (toCurrency === 'INR') return amount / currencyRates[fromCurrency];
+        }
+
+        // Role-based Access Control
+        const userRoles = {
+            'admin': ['all'],
+            'manager': ['view_reports', 'add_transaction'],
+            'user': ['view_reports']
+        };
+
+        function checkPermission(user, action) {
+            const role = user.role;
+            return userRoles[role].includes('all') || userRoles[role].includes(action);
+        }
+
+        // Navigation Active State
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                document.querySelector('.active-nav')?.classList.remove('active-nav');
+                e.currentTarget.classList.add('active-nav');
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
